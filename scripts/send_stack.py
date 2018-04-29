@@ -19,6 +19,8 @@ parser.add_argument("-a", "--ascii", action="store_true",
 parser.add_argument("-s", "--separator", default="",
                     help="Separator for ASCII encoded files (default is whitespace)")
 parser.add_argument("-v", "--verbose", action="store_true")
+parser.add_argument("-t", "--time", type=float, default=0.1,
+                    help="Time to wait transmission")
 parser.add_argument("input", help="Name of the input file")
 
 args = parser.parse_args()
@@ -74,4 +76,4 @@ with serial.Serial(args.device, baudrate=115200) as ser:
     # I've had issues with micro:bits rebooting without compiling the program if
     # these two lines are not present
     ser.flush()
-    sleep(0.5)
+    sleep(args.time)
