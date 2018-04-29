@@ -1,0 +1,11 @@
+{
+    "microbit-dal": {
+        "bluetooth": {
+            "enabled": 0
+        },
+        "debug": 0,
+        "heap_debug": 0,
+        "heap_allocator": 1,
+        "panic_on_heap_full": 0
+    }
+}

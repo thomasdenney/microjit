@@ -1,0 +1,12 @@
+{
+  "name": "microjit",
+  "version": "0.1.0",
+  "bin": "./source",
+  "private": false,
+  "description": "An ARM JIT for Alex Rogers' Stack virtual machine",
+  "author": "Thomas Denney",
+  "license": "MIT",
+  "dependencies": {
+    "microbit": "lancaster-university/microbit#v2.0.0-rc11"
+  }
+}
