@@ -3,10 +3,12 @@
 MicroJIT is a Just-In-Time compiler for Alex Roger's [Stack][stack] Virtual
 Machine on the [BBC micro:bit][microbit]. This repository contains all the
 software required to run the JIT compiler on a micro:bit and deploy Stack
-programs to it via a USB serial connection.
+programs to it via a USB serial connection. You can see a [video demonstration
+here][video].
 
 [stack]: http://www.cs.ox.ac.uk/people/alex.rogers/stack/
 [microbit]: http://microbit.org
+[video]: https://youtu.be/JEjn7r80kkw
 
 The JIT compiler is written in C++ and generates Arm Thumb bytecode. Compiled
 programs are written to the micro:bit's flash, so you can reboot the device and
@@ -15,7 +17,7 @@ running you can deploy a new one, using the script described below.
 
 ## Building & using
 
-*Please note that the following has only been tested under macOS 10.13*
+*Please note that the following has only been tested under macOS 10.13.*
 
 To get started, you'll need to configure your computer for [offline micro:bit
 development][offline]. Please also ensure that you have Python 3+ installed.
@@ -52,6 +54,12 @@ allows you to use Alex Roger's programming environment directly with the
 micro:bit.
 
 [website]: https://github.com/thomasdenney/stack-site
+
+## Running tests
+
+There are around 400 unit tests that run on the micro:bit. To test the project,
+change `Mode` in `source/Config.h` to `ProjectMode::UnitTests` or
+`ProjectMode::OptionalInstructionTests`.
 
 ## License & contributing
 
