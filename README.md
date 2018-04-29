@@ -10,8 +10,8 @@ programs to it via a USB serial connection.
 
 The JIT compiler is written in C++ and generates Arm Thumb bytecode. Compiled
 programs are written to the micro:bit's flash, so you can reboot the device and
-run the same program --- once the currently stored program has finished running
-you can deploy a new one, using the script described below.
+run the same program &mdash; once the currently stored program has finished
+running you can deploy a new one, using the script described below.
 
 ## Building & using
 
